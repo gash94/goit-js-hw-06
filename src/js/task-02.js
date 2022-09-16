@@ -15,4 +15,3 @@ const createItem = ingredients.map(itemArr => {
   return listItem
 });
 listIng.append(...createItem)
-document.Get
