@@ -11,4 +11,25 @@ const images = [
     url: 'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
     alt: 'Group of Horses Running',
   },
+  {
+    url: 'https://placeimg.com/500/375/animals',
+    alt: 'Random animals',
+  },
+  {
+    url: 'https://placeimg.com/500/375/tech',
+    alt: 'Random technology',
+  },
+  {
+    url: 'https://placeimg.com/500/375/people',
+    alt: 'Random people',
+  },
+  
 ];
+
+const gallery = document.querySelector('.gallery')
+
+const newImages = images
+  .map((image) => `<li><img class="image" src="${image.url}" alt="${image.alt}" /></li>`)
+  .join("");
+  
+  gallery.insertAdjacentHTML("beforeend", newImages);
