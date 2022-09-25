@@ -9,8 +9,9 @@ let boxesCollection = [];
 
 function createBoxes(amount) {
   console.log(amount);
+  
   let sizesOfBox = 30;
-  for (var i = 0; i < amount; i += 1) {
+  for (let i = 0; i < amount; i += 1) {
     let createEl = document.createElement("div");
     createEl.style.width = `${sizesOfBox}px`;
     createEl.style.height = `${sizesOfBox}px`;
@@ -35,6 +36,5 @@ function destroyBoxes() {
   boxes.innerHTML = '';
   boxesCollection = [];
 }
-
 btnCreate.addEventListener("click", pushBoxesCollection);
 btnDestroy.addEventListener("click", destroyBoxes);
