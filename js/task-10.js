@@ -5,10 +5,11 @@ const btnDestroy = blockControls.querySelector("[data-destroy]");
 const boxes = document.querySelector("#boxes");
 
 let boxesCollection = [];
-let sizesOfBox = 30;
+
 
 function createBoxes(amount) {
   console.log(amount);
+  let sizesOfBox = 30;
   for (var i = 0; i < amount; i += 1) {
     let createEl = document.createElement("div");
     createEl.style.width = `${sizesOfBox}px`;
@@ -33,7 +34,6 @@ function pushBoxesCollection() {
 function destroyBoxes() {
   boxes.innerHTML = '';
   boxesCollection = [];
-  sizesOfBox = 30;
 }
 
 btnCreate.addEventListener("click", pushBoxesCollection);
