@@ -7,13 +7,14 @@ const validClass = (add, remove) => {
 };
 
 input.addEventListener("blur", (event) => {
-    const length = event.currentTarget.value.length;
-    if (length < valueLength) {
-      return validClass("invalid", "valid")  
+    const length = event.currentTarget.value.length;  
+    if (length == valueLength) {
+      return validClass("valid", "invalid")  
     }
-    if (length >= valueLength) {
-        return validClass("valid", "invalid")  
-      }
+    else {
+     return validClass("invalid", "valid")  
+   }
+    
 });
 
 
