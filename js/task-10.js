@@ -25,12 +25,15 @@ function getRandomHexColor() {
 }
 
 function pushBoxesCollection() {
+  
   createBoxes(Number(input.value));
   boxes.append(...boxesCollection);
 }
 
 function destroyBoxes() {
   boxes.innerHTML = '';
+  boxesCollection = [];
+  sizesOfBox = 30;
 }
 
 btnCreate.addEventListener("click", pushBoxesCollection);
